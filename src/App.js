@@ -44,21 +44,21 @@ function App() {
       doOCR(data);
   }
 
-  const handleCameraImage = () =>{
+  // const handleCameraImage = () =>{
 
-      console.log("photo",camera.current)
+  //     console.log("photo",camera.current)
 
         
       
-      setImages(camera.current.takePhoto())
+  //     setImages(camera.current.takePhoto())
 
-      setImage(images)
+  //     setImage(images)
 
-      handleSubmitImage();
+  //     handleSubmitImage();
 
 
 
-  }
+  // }
 
 
 
@@ -72,22 +72,12 @@ function App() {
       <img src={url ? url :"https://via.placeholder.com/150"} width="350px" height="250px" />
 
       <p>Uploadfile:</p>
-      <input type="file" onChange={(e)=>handleImage(e)} />
+      <input type="file"  accept="image/*" onChange={(e)=>handleImage(e)} />
     
       <button type="submit" onClick={()=>handleSubmitImage()} >submit</button>
 
-
-      {/* <div>
-        <Camera ref={camera} />
-        <button onClick={() =>handleCameraImage() }>Take photo</button>
-        <img src={images} alt='Taken photo'/>
-      </div> */}
-      {console.log("images",images)}
-      <div style={{margin:"5rem"}} >
-
-          Upload from Camera..
-          <input type="file" accept="image/*" capture="environment" />
-      </div>
+   
+     
 
 
       <p>{images}</p>
