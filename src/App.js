@@ -76,12 +76,18 @@ function App() {
     
       <button type="submit" onClick={()=>handleSubmitImage()} >submit</button>
 
-      <div>
+
+      {/* <div>
         <Camera ref={camera} />
         <button onClick={() =>handleCameraImage() }>Take photo</button>
         <img src={images} alt='Taken photo'/>
-      </div>
+      </div> */}
       {console.log("images",images)}
+      <div style={{margin:"5rem"}} >
+
+          Upload from Camera..
+          <input type="file" accept="image/*" capture="environment" />
+      </div>
 
 
       <p>{images}</p>
