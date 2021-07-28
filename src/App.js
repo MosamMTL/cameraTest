@@ -26,6 +26,8 @@ function App() {
   const [ocr, setOcr] = useState('Recognizing...');
  
   const handleImage = (e) =>{
+
+    console.log("e",e.target.files[0])
     setImage(e.target.files[0])
       
   }
@@ -80,8 +82,6 @@ function App() {
      
 
 
-      <p>{images}</p>
-      <p>{image}</p>
     
     </div>
   );
